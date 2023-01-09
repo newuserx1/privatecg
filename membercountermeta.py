@@ -21,24 +21,24 @@ async def main_MemberCounterMeta():
         try:
             while True:
                 print(text_2)
-                edit_message_text_teletips = "**📈 | Real-Time Member Counter** [ᵐᵉᵗᵃ](https://github.com/teletips/MemberCounterMeta#:~:text=Versions-,1.0%20Meta,-Credits)"
+                edit_message_text_teletips = "**🔱 SCIENCE-EDU TEAM ALL PRIVATE GROUPS & CHANNELS ©️\n\n🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰🟰**"
                 for CHANNEL_OR_GROUP in CHANNEL_OR_GROUP_LIST:
                     try:
                         get_chat_teletips = await MemberCounterMeta.get_chat(int(CHANNEL_OR_GROUP))   
                         if get_chat_teletips.type == "channel":
-                            edit_message_text_teletips += f"\n\n📣  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Subscribers</i>\n🔗 └ <i>[Link]({get_chat_teletips.invite_link})</i>"
+                            edit_message_text_teletips += f"\n\n📣  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Subscribers</i>\n🔗 └ "
                         else:
-                            edit_message_text_teletips += f"\n\n💬  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Members</i>\n🔗 └ <i>[Link]({get_chat_teletips.invite_link})</i>" 
+                            edit_message_text_teletips += f"\n\n📣  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Members</i>\n🔗 └ " 
                         await asyncio.sleep(2)
                     except ValueError:
                         print(f'ID not found: {CHANNEL_OR_GROUP }. Skipping...')                       
-                edit_message_text_teletips += f"\n\n<i>Automatically refreshes every 15 minutes</i>"
+                edit_message_text_teletips += f"\n\n<i>Automatically refreshes every 20 minutes</i>"
                 try:
                     await MemberCounterMeta.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, edit_message_text_teletips, disable_web_page_preview=True)
                 except Exception:
                     pass    
                 print(text_3)              
-                await asyncio.sleep(900) # 15 minutes = 900 seconds
+                await asyncio.sleep(1200) # 15 minutes = 900 seconds
         except FloodWait as e:
             await asyncio.sleep(e.x)
 
